@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--  Meta  -->
+    <meta charset="UTF-8" />
+    <title>Isometric Test</title>
+
+    <!--  Styles  -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-fluid grid_container">
+
+
+        <div class="side_bar">
+            <button onclick="clickHandler('Ballard')">BALLARD</button>
+            <button onclick="clickHandler('Cinerama')">DOWNTOWN</button>
+            <button onclick="clickHandler('Sodo')">SODO</button>
+            <button onclick="clickHandler('Georgetown')">GEORGETOWN</button>
+            <button onclick="clickHandler('James')">DOWNTOWN</button>
+            <button onclick="clickHandler('Sorrento')">FIRST HILL</button>
+            <button onclick="clickHandler('About')">ABOUT</button>
+        </div>
+
+
+        <div class="a1 grow" id="blue1">
+        </div>
+        <div class="a2" id="blue2">
+        </div>
+        <div class="a3" id="blue3">
+        </div>
+        <div class="a4 grow" id="blue4">
+        </div>
+        <div class="a5 grow" id="blue5">
+        </div>
+        <div class="a6 grow" id="blue6">
+        </div>
+        <div class="a7 grow" id="blue7">
+        </div>
+        <div class="a8" id="blue8">
+        </div>
+        <div class="a9 grow" id="blue9">
+        </div>
+
+
+        <div class="roll" id="blue10">
+        </div>
+        <div class="bend" id="blue11">
+        </div>
+
+        <div class="title1" id="about">
+            <h1 class="skew_right">ISOMETRIC</h1>
+            <h1 class="skew_left">MURAL MAP</h1>
+        </div>
+
+
+        <div class="info pad5">
+            <h2 id="artist"></h2>
+            <h3 id="location"></h3>
+            <h3 id="year"></h3>
+            <p id="description"></p>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="scripts/lottie.js"></script>
+    <script src="scripts/icecream.js"></script>
+
+
+    <script>
+        var animation3 = bodymovin.loadAnimation({
+            container: document.getElementById('blue2'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'animation/water.json'
+        })
+        var animation3 = bodymovin.loadAnimation({
+            container: document.getElementById('blue3'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'animation/water.json'
+        })
+        var animation3 = bodymovin.loadAnimation({
+            container: document.getElementById('blue8'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'animation/smith.json'
+        })
+        var animation3 = bodymovin.loadAnimation({
+            container: document.getElementById('blue10'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'animation/blueman.json'
+        })
+        var animation3 = bodymovin.loadAnimation({
+            container: document.getElementById('blue11'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'animation/bend.json'
+        })
+
+    </script>
+</body>
+
+</html>

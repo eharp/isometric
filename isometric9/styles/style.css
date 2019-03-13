@@ -1,0 +1,265 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #E9F3FA;
+    width: 5000px;
+    overflow: hidden;
+}
+
+/*typography*/
+h1 {
+    font-size: 5em;
+    font-family: 'Cabin', sans-serif;
+    color: #92ADD7;
+}
+
+h2 {
+    font-size: 2em;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+h3 {
+    font-size: 1em;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 800;
+    color: white;
+}
+
+p {
+    font-size: 1em;
+    font-family: 'Cabin', sans-serif;
+    color: white;
+}
+
+.pad2 {
+    padding: 2vmin;
+}
+
+.pad5 {
+    padding: 5vmin;
+}
+
+.pad10 {
+    padding: 10vmin;
+}
+
+.mar10 {
+    margin: 10vmin;
+}
+
+/*color*/
+.blue_v1 {
+    background-color: #E9F3FA;
+}
+.blue_v2 {
+    background-color: #C3DEF1;
+}
+.blue_v3 {
+    background-color: #92ADD7;
+}
+.blue_v4 {
+    background-color: #5E72A9;
+}
+.blue_v5 {
+    background-color: #373F70;
+}
+
+
+
+.button,
+input[type="submit"],
+button {
+    font-size: 1.5em;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 500;
+    color: white;
+    background: #373F70;
+    padding: 2vmin;
+    margin: 1vmin;
+    border: none;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.side_bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20vmin;
+    height: 100vh;
+    z-index: 20;
+    padding: 5vmin;
+}
+
+.info {
+    position: fixed;
+    bottom: 0;
+    right: 5vmin;
+    width: 20vmax;
+    height: 20vmin;
+    background-color: #373F70;
+    z-index: 20;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+/*skew*/
+.skew_right{
+    transform: skewY(30deg);
+}
+
+.skew_left{
+    transform: skewY(-30deg);
+}
+
+/*grid*/
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 385px);
+/*    grid-gap: 10px;*/
+    padding: 500px;
+}
+
+.a1 {
+    grid-area: 1/3/4/5;
+    transition: 1s;
+    align-self: flex-end;
+}
+
+.a2 {
+    grid-area: 2/2/5/4;
+    align-self: flex-end;
+}
+
+.a3 {
+    grid-area: 2/4/5/6;
+    align-self: flex-end;
+}
+
+.a4 {
+    grid-area: 3/1/6/3;
+    transition: 1s;
+    align-self: flex-end;
+}
+
+.a5 {
+    grid-area: 3/3/6/5;
+    transition: 1s;
+    align-self: flex-end;
+}
+
+.a6 {
+    grid-area: 3/5/6/7;
+    transition: 1s;
+    align-self: flex-end;
+}
+
+.a7 {
+    grid-area: 4/2/7/4;
+    transition: 1s;
+    align-self: flex-end;
+}
+
+.a8 {
+    grid-area: 4/4/7/6;
+    align-self: flex-end;
+}
+
+.a9 {
+    grid-area: 5/3/8/5;
+    transition: 1s;
+     align-self: flex-end;
+}
+
+.roll {
+    grid-area: 1/1/2/2;
+    z-index: 20;
+}
+
+.bend {
+    grid-area: /2/2/3;
+    z-index: 20;
+}
+
+
+/*hover*/
+.grow:hover{
+    transform: scale(1.5);
+    transition: 2s;
+    transition-timing-function: ease-in-out;
+    z-index: 10;
+    background-color: #E9F3FA;
+    transform-origin: bottom;
+}
+
+/*text*/
+.title1{
+    grid-area: 1/1/2/2;
+}
+
+/*medium media query matching flex*/
+@media only screen and (max-width: 1024px) and (min-width: 640px) {
+
+    body {
+        background-color: aqua;
+        width: 3000px;
+    }
+
+    .side_bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 12vmin;
+        background-color: white;
+        z-index: 30;
+    }
+
+    .info {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 30vmin;
+        background-color: pink;
+        z-index: 20;
+    }
+}
+
+/*small media query matching flex*/
+@media only screen and (max-width: 640px) {
+
+    body {
+        background-color: peachpuff;
+        width: 4000px;
+    }
+
+    .side_bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 16vmin;
+        background-color: white;
+        z-index: 30;
+    }
+
+    .info {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100vw;
+        height: 30vh;
+        background-color: yellow;
+        z-index: 20;
+
+    }
+}
